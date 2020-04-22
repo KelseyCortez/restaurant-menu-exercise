@@ -131,3 +131,36 @@ const menu = {
         }
     ]
 };
+
+
+const navLinks = document.createElement('ul');
+const navContainer = document.querySelector('.js-menu');
+navContainer.appendChild(navLinks);
+
+const categories = Object.keys(menu);
+console.log(categories);
+
+function createListItem(category) {
+    const listItem = document.createElement('li');
+    listItem.addEventListener("click", function(){
+        console.log(`You clicked: ${listItem.textContent}`)
+    });
+    listItem.textContent = category;
+    navLinks.appendChild(listItem);
+}
+
+// function getCategoryItems(category) {
+//     menu.forEach(function(category) {
+
+//     });
+// }
+categories.forEach(createListItem);
+
+function getCategoryItems(category) {
+    menu[category].forEach(function(item) {
+    console.log(item.name);
+    });
+};
+
+categories.forEach(getCategoryItems)
+// console.log(getCategoryItems('breakfast'))
