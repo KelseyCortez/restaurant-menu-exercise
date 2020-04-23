@@ -137,6 +137,8 @@ const navLinks = document.createElement('ul');
 const navContainer = document.querySelector('.js-menu');
 navContainer.appendChild(navLinks);
 
+
+
 const categories = Object.keys(menu);
 console.log(categories);
 
@@ -150,17 +152,23 @@ function createListItem(category) {
 }
 
 // function getCategoryItems(category) {
-//     menu.forEach(function(category) {
-
-//     });
-// }
-categories.forEach(createListItem);
-
-function getCategoryItems(category) {
-    menu[category].forEach(function(item) {
-    console.log(item.name);
-    });
-};
-
-categories.forEach(getCategoryItems)
-// console.log(getCategoryItems('breakfast'))
+    //     menu.forEach(function(category) {
+        
+        //     });
+        // }
+        categories.forEach(createListItem);
+        
+        function getCategoryItems(category) {
+            menu[category].forEach(function(item) {
+                console.log(item.name);
+            });
+        };
+        
+        categories.forEach(getCategoryItems)
+        // console.log(getCategoryItems('breakfast'))
+        
+        // function ItemToCard(menuItem) {
+            
+            // }
+const navContainer2 = document.querySelector('.js-main-content')
+// navContainer2.appendChild(navLinks);
